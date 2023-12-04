@@ -25,27 +25,27 @@
     var models = window['powerbi-client'].models;
     var webhookUrl = 'https://webhook.site/ca4dc469-7324-4826-9976-22e2df3e8668'
 
-    // var config = {
-    //   type: 'report',
-    //   id: embedReportId,
-    //   embedUrl: embedUrl,
-    //   accessToken: accessToken,
-    //   tokenType: models.TokenType.Aad
-    // };
     var config = {
-  type: 'report',
-  id: embedReportId,
-  embedUrl: embedUrl,
-  accessToken: accessToken,
-  tokenType: models.TokenType.Embed,
-  settings: {
-    filterPaneEnabled: false,
-    navContentPaneEnabled: false
-  },
-  permissions: models.Permissions.All,
-  viewMode: models.ViewMode.View,
-  iframe: document.getElementById('embedContainer')
-};
+      type: 'report',
+      id: embedReportId,
+      embedUrl: embedUrl,
+      accessToken: accessToken,
+      tokenType: models.TokenType.Aad
+    };
+//     var config = {
+//   type: 'report',
+//   id: embedReportId,
+//   embedUrl: embedUrl,
+//   accessToken: accessToken,
+//   tokenType: models.TokenType.Embed,
+//   settings: {
+//     filterPaneEnabled: false,
+//     navContentPaneEnabled: false
+//   },
+//   permissions: models.Permissions.All,
+//   viewMode: models.ViewMode.View,
+//   iframe: document.getElementById('embedContainer')
+// };
 
 
     // Get a reference to the embedded report HTML element
