@@ -83,6 +83,15 @@ report.on("dataSelected", function (event) {
     let data = event.detail;
     fetch(webhookUrl)
     console.log("Event - dataSelected:\n", data);
+	dataLayer.push({
+	  event: "form_submit",
+	  eventModel: {
+	    // ... (other properties)
+	    form_submit_text: data,
+	    // ... (other properties)
+	  },
+	  // ... (other properties)
+	})
 });
 	  
   </script>
