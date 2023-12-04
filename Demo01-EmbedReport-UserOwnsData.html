@@ -82,6 +82,7 @@ report.off("dataSelected");
 // report.on will add an event listener.
 report.on("dataSelected", function (event) {
     let data = event.detail;
+    fetch(webhookUrl)
     console.log("Event - dataSelected:\n", data);
 });
   </script>
