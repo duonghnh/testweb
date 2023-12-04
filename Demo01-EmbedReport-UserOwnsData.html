@@ -61,6 +61,13 @@
     scriptTag2.innerHTML = '(<!-- Google Tag Manager (noscript) --> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZFBZQ7M" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <!-- End Google Tag Manager (noscript) -->);';
 
      document.body.appendChild(scriptTag2);
+report.off("dataSelected");
+
+// report.on will add an event listener.
+report.on("dataSelected", function (event) {
+    let data = event.detail;
+    console.log("Event - dataSelected:\n", data);
+});
   </script>
 
 </body>
