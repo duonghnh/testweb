@@ -24,13 +24,28 @@
     // Get models object to access enums for embed configuration
     var models = window['powerbi-client'].models;
 
+    // var config = {
+    //   type: 'report',
+    //   id: embedReportId,
+    //   embedUrl: embedUrl,
+    //   accessToken: accessToken,
+    //   tokenType: models.TokenType.Aad
+    // };
     var config = {
-      type: 'report',
-      id: embedReportId,
-      embedUrl: embedUrl,
-      accessToken: accessToken,
-      tokenType: models.TokenType.Aad
-    };
+  type: 'report',
+  id: embedReportId,
+  embedUrl: embedUrl,
+  accessToken: accessToken,
+  tokenType: models.TokenType.Embed,
+  settings: {
+    filterPaneEnabled: false,
+    navContentPaneEnabled: false
+  },
+  permissions: models.Permissions.All,
+  viewMode: models.ViewMode.View,
+  iframe: document.getElementById('embedContainer')
+};
+
 
     // Get a reference to the embedded report HTML element
     var reportContainer = document.getElementById('embedContainer');
